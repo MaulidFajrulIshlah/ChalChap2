@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="@color/pastel"
     tools:context=".MainActivity">
 
 
@@ -13,11 +14,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Cost of Service"
+        android:textStyle="bold"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
         android:inputType="number"
+        android:textColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
     <TextView
         android:id="@+id/service_question"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,18 +43,24 @@
         <RadioButton
             android:id="@+id/option_20_percent"
             android:text="Amazing (20%)"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <RadioButton
             android:id="@+id/option_18_percent"
+            android:textColor="@color/white"
             android:text="Good (18%)"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <RadioButton
             android:id="@+id/option_15_percent"
             android:text="OK (15%)"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -56,25 +69,33 @@
     <Switch
         android:id="@+id/round_tip"
         android:layout_width="0dp"
+        android:textStyle="bold"
         android:layout_height="wrap_content"
         android:checked="true"
+        android:textColor="@color/white"
         android:text="Round up tip?"
         app:layout_constraintBaseline_toBottomOf="@id/tip_option"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tip_option" />
-    
+
     <Button
         android:id="@+id/btn_calculate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/round_tip"
-        android:text="Calculate"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/customtombol"
+        android:text="Calculate"
+        android:textColor="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/round_tip" />
 
     <TextView
         android:id="@+id/tip_result"
         android:text="Tip amount"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/btn_calculate"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="wrap_content"
@@ -83,9 +104,11 @@
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:layout_marginTop="44dp"
         android:scaleType="center"
-        android:src="@drawable/binar"
+        android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tip_result" />
 </androidx.constraintlayout.widget.ConstraintLayout>
