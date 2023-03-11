@@ -69,14 +69,17 @@
     <Switch
         android:id="@+id/round_tip"
         android:layout_width="0dp"
-        android:textStyle="bold"
         android:layout_height="wrap_content"
         android:checked="true"
-        android:textColor="@color/white"
         android:text="Round up tip?"
-        app:layout_constraintBaseline_toBottomOf="@id/tip_option"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/tip_option" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/tip_option"
+        tools:layout_editor_absoluteY="224dp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Button
         android:id="@+id/btn_calculate"
@@ -102,8 +105,8 @@
         android:layout_height="wrap_content"/>
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:scaleType="center"
         android:src="@drawable/logo"
