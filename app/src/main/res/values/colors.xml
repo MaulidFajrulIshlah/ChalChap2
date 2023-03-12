@@ -8,4 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="pastel">#5F6F94</color>
+
+    <color name="pink">#FB2576</color>
+    <color name="ungu">#3F0071</color>
+    <color name="unguGelap">#150050</color>
 </resources>
