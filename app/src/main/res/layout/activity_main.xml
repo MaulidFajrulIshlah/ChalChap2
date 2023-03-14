@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="@color/pastel"
+    android:background="@drawable/bg"
     tools:context=".MainActivity">
 
 
@@ -13,14 +13,16 @@
         android:id="@+id/cost_of_service"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Cost of Service"
+        android:hint="@string/cost_of_service"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColorHighlight="@color/white"
         android:textColorHint="@color/white"
         android:inputType="number"
         android:textColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:autofillHints="" />
     <TextView
         android:id="@+id/service_question"
         android:textColor="@color/white"
@@ -30,7 +32,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cost_of_service"
-        android:text="How was the service?"/>
+        android:text="@string/how_was_the_service"/>
 
     <RadioGroup
         android:id="@+id/tip_option"
@@ -45,7 +47,7 @@
             android:id="@+id/option_20_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Amazing (20%)"
+            android:text="@string/amazing_20"
             android:textColor="@color/pink"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -54,7 +56,7 @@
             android:id="@+id/option_18_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Good (18%)"
+            android:text="@string/good_18"
             android:textColor="@color/unguGelap"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -63,7 +65,7 @@
             android:id="@+id/option_15_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OK (15%)"
+            android:text="@string/ok_15"
             android:textColor="@color/ungu"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -74,25 +76,26 @@
         android:id="@+id/round_tip"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="32dp"
         android:checked="true"
-        android:text="Round up tip?"
+        android:text="@string/round_up_tip"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintHorizontal_bias="0.191"
         app:layout_constraintStart_toStartOf="@id/tip_option"
-        app:layout_constraintTop_toBottomOf="@+id/tip_option" />
+        app:layout_constraintTop_toBottomOf="@+id/tip_option"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Button
         android:id="@+id/btn_calculate"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:textStyle="bold"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="@drawable/customtombol"
-        android:text="Calculate"
+        android:background="@drawable/custom_tombol"
+        android:text="@string/calculate"
         android:textColor="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +103,7 @@
 
     <TextView
         android:id="@+id/tip_result"
-        android:text="Tip amount"
+        android:text="@string/tip_amount2"
         android:textStyle="bold"
         android:textSize="20sp"
         android:textColor="@color/white"
@@ -110,13 +113,14 @@
         android:layout_height="wrap_content"/>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="206dp"
+        android:layout_height="130dp"
         android:layout_marginTop="44dp"
         android:scaleType="center"
-        android:src="@drawable/logo1"
+        android:src="@drawable/img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tip_result"/>
+        app:layout_constraintTop_toBottomOf="@id/tip_result"
+        android:contentDescription="@string/todo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
